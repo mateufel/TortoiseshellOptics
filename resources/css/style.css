@@ -10,7 +10,6 @@ p {
 }
 
 /* HEADER SECTION */
-
 header {
   display: flex;
   flex-direction: column;
@@ -53,6 +52,11 @@ header {
   padding-right: 2rem;
 }
 
+.header-mobile {
+  display: none;
+  padding-right: 2rem;
+}
+
 .title-container {
   display: flex;
   width: 960px;
@@ -68,6 +72,59 @@ header {
   font-weight: bold;
   font-size: 2rem;
   line-height: 1.2;
+}
+
+/* Tablet version */
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 22rem;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  .top-header-container {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .title-container h1 {
+    margin-top: 5rem;
+    margin-right: 2rem;
+    padding: 0.75rem 4rem;
+    font-size: 1.33rem;
+  }
+
+  .header-list {
+    display: none;
+  }
+
+  .header-mobile {
+    display: block;
+  }
+}
+
+/* Phone version */
+@media only screen and (max-width: 480px) {
+  header {
+    height: 17rem;
+    background-position: 20%;
+  }
+
+  .top-header-container {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .title-container h1 {
+    width: 100%;
+    margin-top: 9rem;
+    margin-right: 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+  }
 }
 
 /* MAIN SECTION */
@@ -131,6 +188,52 @@ header {
   font-size: 1rem;
 }
 
+/* Phone version */
+@media only screen and (max-width: 480px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+    margin: 3.77rem 0;
+  }
+
+  .features-item {
+    height: auto;
+    margin: 0.77rem 0rem;
+  }
+
+  .features-item p {
+    font-size: 0.77rem;
+  }
+
+  .info {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .info-item {
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 4rem 0;
+    width: 100%;
+  }
+
+  .info-item .title {
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+
+  .info-item p {
+    padding: 1rem 0 0 0;
+    font-size: 0.77rem;
+  }
+}
+
+
+/* FOOTER SECTION */
 footer {
   display: flex;
   justify-content: flex-start;
@@ -150,5 +253,23 @@ footer img {
 
 footer p
 {
+  display: inline-block;
   padding-left: 1rem;
+}
+
+/* Phone version */
+@media only screen and (max-width: 480px) {
+
+  footer {
+    justify-content: center;
+    width: 100%;
+  }
+
+  footer img {
+    margin-left: 0;
+  }
+
+  footer p {
+    display: none;
+  }
 }
